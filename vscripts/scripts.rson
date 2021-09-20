@@ -895,3 +895,10 @@ Scripts:
 [
 	freelance/_freelance.gnut
 ]
+
+When: "SERVER || CLIENT"
+Scripts:
+[
+	weapons/mp_ability_bs_warp_position.nut
+	weapons/mp_ability_bs_warp.nut
+]
