@@ -37,6 +37,7 @@ bool function OnWeaponAttemptOffhandSwitch_bs_warp( entity weapon )
 var function OnWeaponPrimaryAttack_bs_warp( entity weapon, WeaponPrimaryAttackParams attackParams )
 {
 	entity weaponOwner = weapon.GetWeaponOwner()
+	float chargeTime = weapon.GetWeaponSettingFloat( eWeaponVar.charge_time )
 	print("yay")
 	//if ( StatusEffect_GetSeverity( weaponOwner, eStatusEffect.crypto_has_camera ) == 0.0 )
 	//	return 0
@@ -49,8 +50,13 @@ var function OnWeaponPrimaryAttack_bs_warp( entity weapon, WeaponPrimaryAttackPa
 	//LocPair loc = NewLocPair( <8486, 27026, 5000>, <0,0,0> )
 	LocPair loc = NewLocPair( BS_WARP_POS + <0, 0, 10>, <0,0,0> )
 	weaponOwner.SetOrigin( loc.origin )
+	EmitSoundOnEntityOnlyToPlayer( weaponOwner, weaponOwner, "Wraith_PhaseGate_FirstGate_Place_1p" )
+	EmitSoundOnEntityExceptToPlayer( weaponOwner, weaponOwner, "Wraith_PhaseGate_FirstGate_Place_3p" )
+#else
+	ScreenFlash( 80, 100, 140, 0, 0.2 )
 #endif
 
+	PhaseShift( weaponOwner, 0, chargeTime, eShiftStyle.Dash )
 	PlayerUsedOffhand( weaponOwner, weapon )
 
 	int ammoReq = weapon.GetAmmoPerShot()
