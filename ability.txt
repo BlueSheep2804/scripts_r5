@@ -1,0 +1,71 @@
+ability_tactical
+ ability
+
+ability_ultimate
+ ability
+
+assalt_rifle
+ assalt_rifle_optics
+  optics
+  optics_cq
+  optics_ranged
+ stocks_tactical
+ projectile_ricochet
+ character_mods
+
+smg
+ smg_optics
+  optics
+  optics_cq
+  optics_cq_threat
+  optics_ranged
+ stocks_tactical
+ projectile_ricochet
+ character_mods
+
+sniper
+ optics
+ projectile_ricochet
+ character_mods
+
+stocks_sniper
+
+sniper_optics
+ optics_cq
+ optics_ranged
+ optics_fullscreen
+
+
+handgun
+ handgun_optics
+  optics
+  optics_cq
+  optics_cq_threat
+ character_mods
+
+shotgun
+ optics
+ character_mods
+
+shotgun_bolts
+
+lmg
+ lmg_optics
+  optics
+  optics_cq
+  optics_ranged
+ character_mods
+
+mags_energy
+
+mags_heavy
+
+mags_light
+
+melee
+
+barrels_large
+ barrels
+
+barrels_medium
+ barrels
