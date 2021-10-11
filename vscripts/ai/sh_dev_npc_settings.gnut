@@ -3,10 +3,10 @@ global function SetupOverrideSpawnSurvivalCharacter
 global function SetupSurvival
 global function SetupModelSpawner
 global function SetupSurvivalLoot
+global function SetupCustomLoot
 global function SetupSurvivalIncapShieldBot
 global function SetupAbilities
 global function SetupWeapons
-global function SetupBsMenu
 
 void function SetupChangeSurvivalCharacterClass()
 {
@@ -110,6 +110,13 @@ void function SetupSurvivalLoot( var categories )
 	#endif
 }
 
+void function SetupCustomLoot( var categories )
+{
+	#if UI
+		RunClientScript( "SetupCustomLoot", categories )
+	#endif
+}
+
 void function SetupAbilities()
 {
 	#if UI
@@ -163,19 +170,5 @@ void function SetupSurvivalIncapShieldBot()
 	SetupDevCommand( "Spawn Bot with Lv 3 Incap Shield", "script Dev_SpawnBotWithIncapShieldToView( 3 )" )
 	SetupDevCommand( "Spawn Bot with Lv 4 Incap Shield", "script Dev_SpawnBotWithIncapShieldToView( 4 )" )
 	SetupDevCommand( "Spawn Bot with a Random Incap Shield", "script Dev_SpawnBotWithIncapShieldToView( -1 )" )
-	#endif
-}
-
-void function SetupBsMenu()
-{
-	#if UI
-	SetupDevCommand( "Warp Position", "give mp_ability_bs_warp_position" )
-	SetupDevCommand( "Warp", "give mp_ability_bs_warp" )
-	SetupDevCommand( "---------", "give mp_weapon_bs_yay" )
-	SetupDevCommand( "Sheeper", "give mp_weapon_bs_sheeper" )
-	SetupDevCommand( "yay", "give mp_weapon_bs_yay" )
-	SetupDevCommand( "Kinoshita", "give mp_weapon_bs_kinoshita" )
-	SetupDevCommand( "SG Test", "give __sgtest" )
-	SetupDevCommand( "Test", "give __test" )
 	#endif
 }
