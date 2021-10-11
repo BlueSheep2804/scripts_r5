@@ -903,4 +903,5 @@ Scripts:
 [
 	weapons/mp_ability_bs_warp_position.nut
 	weapons/mp_ability_bs_warp.nut
+	weapons/mp_ability_bs_dummy.nut
 ]

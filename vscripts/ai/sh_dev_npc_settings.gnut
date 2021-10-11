@@ -149,6 +149,7 @@ void function SetupAbilities()
 
 	SetupDevCommand( "Warp position", "give mp_ability_bs_warp_position" )
 	SetupDevCommand( "Warp", "give mp_ability_bs_warp" )
+	SetupDevCommand( "Dummy", "give mp_ability_bs_dummy" )
 	#endif
 }
 
