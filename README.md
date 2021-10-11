@@ -11,11 +11,18 @@
 Burst and pseudo Full-auto
 
 ## Mod system file
-- [/vscripts/ai/sh_dev_npc_settings.gnut](/vscripts/ai/sh_dev_npc_settings.gnut)
-- [/vscripts/ui/menu_dev.nut](/vscripts/ui/menu_dev.nut)
 - [/vscripts/_mapspawn.gnut](/vscripts/_mapspawn.gnut)
 - [/vscripts/scripts.rson](/vscripts/scripts.rson)
+
+## JANU`s Custom Weapon Framework
+- [/vscripts/ai/sh_dev_npc_settings.gnut](/vscripts/ai/sh_dev_npc_settings.gnut)
+- [/vscripts/ui/menu_dev.nut](/vscripts/ui/menu_dev.nut)
+- [/vscripts/cl_survival_inventory.gnut](/vscripts/cl_survival_inventory.gnut)
+- [/vscripts/cl_survival_loot.gnut](/vscripts/cl_survival_loot.gnut)
+- [/vscripts/sh_survival_loot.gnut](/vscripts/sh_survival_loot.gnut)
 - [/vscripts/sh_survival_loot_all.gnut](/vscripts/sh_survival_loot_all.gnut)
+- [/vscripts/sh_survival_loot_distribution.gnut](/vscripts/sh_survival_loot_distribution.gnut)
+- [/vscripts/survival_loot.gnut](/vscripts/survival_loot.gnut)
 
 
 ## Base README
