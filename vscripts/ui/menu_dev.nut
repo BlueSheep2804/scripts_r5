@@ -272,6 +272,7 @@ void function SetupDefaultDevCommandsMP()
 	SetupDevMenu( "Equip Weapon", SetDevMenu_Weapons )
         SetupDevMenu( "TDM Weapon", SetDevMenu_TDMWeapons )
 	SetupDevMenu( "MDLSpawner", SetDevMenu_ModelSpawner )
+	SetupDevMenu( "BlueSheep", SetDevMenu_BsMenu )
 
 	if ( IsSurvivalMenuEnabled() )
 	{
@@ -388,6 +389,11 @@ void function SetupLevelDevCommands()
 			SetupDevCommand( "Toggle Rebreather Masks", "script ToggleRebreatherMasks()" )
 			break
 	}
+}
+
+void function SetDevMenu_BsMenu( var _ )
+{
+	thread ChangeToThisMenu( SetupBsMenu )
 }
 
 void function SetDevMenu_ModelSpawner( var _ )

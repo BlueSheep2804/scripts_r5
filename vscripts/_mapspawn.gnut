@@ -288,7 +288,6 @@ void function CodeCallback_MapSpawn() // original script entry point
 	PrecacheWeapon( $"mp_weapon_bs_kinoshita" )
 	//PrecacheWeapon( $"__sgtest" )
 	//PrecacheWeapon( $"__test" )
-	PrecacheWeapon( $"mp_weapon_autopistol_" )
 
 	printl( "Code Script: _mapspawn" )
 
