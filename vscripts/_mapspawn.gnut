@@ -283,6 +283,12 @@ void function CodeCallback_MapSpawn() // original script entry point
 
 	PrecacheWeapon( $"mp_ability_bs_warp_position" )
 	PrecacheWeapon( $"mp_ability_bs_warp" )
+	PrecacheWeapon( $"mp_weapon_bs_sheeper" )
+	PrecacheWeapon( $"mp_weapon_bs_yay" )
+	PrecacheWeapon( $"mp_weapon_bs_kinoshita" )
+	//PrecacheWeapon( $"__sgtest" )
+	//PrecacheWeapon( $"__test" )
+	PrecacheWeapon( $"mp_weapon_autopistol_" )
 
 	printl( "Code Script: _mapspawn" )
 

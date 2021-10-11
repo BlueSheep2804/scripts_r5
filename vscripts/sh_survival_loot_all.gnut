@@ -397,7 +397,10 @@ void function SURVIVAL_Loot_All_InitShared()
 		#endif
 	}
 
-
+	{
+		file.lootData["mp_weapon_bs_sheeper"] <- file.lootData["mp_weapon_wingman"]
+		file.lootData["mp_weapon_bs_yay"] <- file.lootData["mp_weapon_rspn101"]
+	}
 
 	#if(UI)
 		RegisterSignal( "GatherFriendInfo" )

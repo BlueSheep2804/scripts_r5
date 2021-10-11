@@ -53,6 +53,7 @@ void function SetupWeapons()
 	#if UI
 	SetupDevCommand( "Alternator SMG", "give mp_weapon_alternator_smg" )
 	SetupDevCommand( "RE45", "give mp_weapon_autopistol" )
+	SetupDevCommand( "WPN_RE45_AUTOPISTOL", "give mp_weapon_autopistol_" )
 	SetupDevCommand( "Charge Rifle", "give mp_weapon_defender" )
 	SetupDevCommand( "Longbow DMR", "give mp_weapon_dmr" )
 	SetupDevCommand( "Triple Take", "give mp_weapon_doubletake" )
@@ -79,6 +80,11 @@ void function SetupWeapons()
 	SetupDevCommand( "Thermite Grenade", "give mp_weapon_thermite_grenade" )
 	SetupDevCommand( "Frag Grenade", "give mp_weapon_frag_grenade" )
 	SetupDevCommand( "Arc Star", "give mp_weapon_grenade_emp" )
+	SetupDevCommand( "Sheeper", "give mp_weapon_bs_sheeper" )
+	SetupDevCommand( "yay", "give mp_weapon_bs_yay" )
+	SetupDevCommand( "Kinoshita", "give mp_weapon_bs_kinoshita" )
+	SetupDevCommand( "SG Test", "give __sgtest" )
+	SetupDevCommand( "Test", "give __test" )
 	#endif
 }
 
