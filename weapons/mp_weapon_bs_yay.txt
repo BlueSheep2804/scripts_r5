@@ -97,14 +97,27 @@ WeaponData
 "viewmodel_shake_forward"  "0.2"
 "active_crosshair_count"  "1"
 "rui_crosshair_index"  "0"
-"ammo_pool_type"  "none"
 "ammo_clip_size"  "18"
-"ammo_default_total"  "18180"
-"ammo_stockpile_max"  "180"
+"ammo_default_total"  "1818"
+"ammo_stockpile_max"  "1800"
 "ammo_clip_reload_max"  "18"
-"ammo_no_remove_from_stockpile"  "0"
+"ammo_no_remove_from_stockpile"  "1"
 "ammo_min_to_fire"  "1"
 "uses_ammo_pool"  "0"
+
+Mods
+{
+	gold
+	{
+	}
+
+	survival_finite_ammo
+	{
+		"ammo_no_remove_from_stockpile"  "0"
+		"ammo_stockpile_max"  "1800"
+	}
+}
+
 RUI_CrosshairData
 {
 DefaultArgs
