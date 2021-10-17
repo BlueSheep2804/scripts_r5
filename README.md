@@ -9,6 +9,7 @@
 - [Sheeper weapon](/weapons/mp_weapon_bs_sheeper.txt)
 - [Yay Weapon](/weapons/mp_weapon_bs_yay.txt)  
 Burst and pseudo Full-auto
+- [y Weapon](/weapons/mp_weapon_bs_y.txt)
 
 ## Mod system file
 - [/vscripts/_mapspawn.gnut](/vscripts/_mapspawn.gnut)
