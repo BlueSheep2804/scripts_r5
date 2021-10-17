@@ -97,6 +97,7 @@ WeaponData
 "viewmodel_shake_forward"  "0.2"
 "active_crosshair_count"  "1"
 "rui_crosshair_index"  "0"
+"ammo_pool_type"	"bullet"
 "ammo_clip_size"  "18"
 "ammo_default_total"  "1818"
 "ammo_stockpile_max"  "1800"
@@ -113,7 +114,7 @@ Mods
 
 	survival_finite_ammo
 	{
-		"ammo_no_remove_from_stockpile"  "0"
+		"ammo_no_remove_from_stockpile"  "1"
 		"ammo_stockpile_max"  "1800"
 	}
 }
