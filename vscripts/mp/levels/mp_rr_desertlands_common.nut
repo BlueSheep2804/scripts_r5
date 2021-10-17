@@ -111,6 +111,8 @@ void function EntitiesDidLoad()
 
 	if ( file.isTrainEnabled )
 		thread DesertlandsTrain_Init()
+	
+	SpawnEditorProps()
 }
 #endif
 
@@ -491,5 +493,41 @@ void function FullmapPackage_Train( entity ent, var rui )
 	MinimapPackage_Train( ent, rui )
 	RuiSetFloat2( rui, "iconScale", <1.5,1.5,0.0> )
 	RuiSetFloat3( rui, "iconColor", <0.5,0.5,0.5> )
+}
+#endif
+
+
+#if SERVER
+entity function CreateEditorProp(asset a, vector pos, vector ang, bool mantle = false, float fade = 2000)
+{
+	entity e = CreatePropDynamic(a,pos,ang,SOLID_VPHYSICS,fade)
+	e.kv.fadedist = fade
+	if(mantle) e.AllowMantle()
+	return e
+}
+#endif
+
+
+#if SERVER
+void function SpawnEditorProps()
+{
+    // Written by mostly fireproof. Let me know if there are any issues!
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9216,10048,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9472,10048,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9472,10304,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9216,10304,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9728,10048,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9984,10048,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9728,9792,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9984,9792,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9216,10560,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9472,10560,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9728,10560,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9728,10304,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9984,10560,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9984,10304,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9472,9792,6144>, <0,0,0>, true, 8000 )
+    CreateEditorProp( $"mdl/thunderdome/thunderdome_cage_ceiling_256x256_06.rmdl", <9216,9792,6144>, <0,0,0>, true, 8000 )
+
 }
 #endif
