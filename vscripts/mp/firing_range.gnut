@@ -476,7 +476,7 @@ void function SpawnEquipments()
 				LootData item = group[j]
 				vector pos = firstPos + rght*itemOffsetX*j - fwd*itemOffsetY*i
 
-				entity loot = SpawnGenericLoot(item.ref, pos, <0,90,0>, 1)
+				entity loot = SpawnGenericLoot(item.ref, pos - <200, 0, 0>, <0,90,0>, 1)
 				thread OnPickupGenericThread(loot, item.ref)
 			}
 		}
@@ -497,7 +497,7 @@ void function SpawnAttachments()
 				continue
 
 			entity r = file.rackSpawns[ammoIndex].point
-			vector firstPos = r.GetOrigin() - r.GetRightVector()*cornerOffset
+			vector firstPos = r.GetOrigin() - r.GetRightVector()*cornerOffset - <0, 520, 0>
 
 			int row = 0
 			int col = 0
@@ -509,7 +509,7 @@ void function SpawnAttachments()
 					col = 0
 				}
 
-				vector pos = firstPos - r.GetRightVector()*col*placementOffset + r.GetForwardVector()*row*placementOffset
+				vector pos = firstPos - r.GetRightVector()*col*placementOffset + r.GetForwardVector()*row*-placementOffset
 
 				entity loot = SpawnGenericLoot( ref, pos, <0,0,0>, 1 )
 				thread OnPickupGenericThread(loot, ref)
@@ -541,6 +541,11 @@ void function CreateRackGroups()
 
 			file.rackSpawns[ammoIndex].racks.append(rack)
 			file.rackSpawns[ammoIndex].ammoType = ammoType
+
+			printl(arr[i].ref)
+			printl(pos)
+			printl(ang)
+			printl("----------")
 
 			thread OnPickupFromRackThread(GetWeaponFromRack(rack), arr[i].ref)
 		}
