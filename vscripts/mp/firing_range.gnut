@@ -222,9 +222,9 @@ void function OnPlayerRespawned(entity player)
 			return
 	}
 	
-	entity primary = player.GiveWeapon("__test", WEAPON_INVENTORY_SLOT_PRIMARY_0, ["optic_cq_hcog_classic"])
+	entity primary = player.GiveWeapon("mp_weapon_vinson", WEAPON_INVENTORY_SLOT_PRIMARY_0, ["highcal_mag_l3", "optic_cq_hcog_classic", "stock_tactical_l3"])
 	entity secondary = player.GiveWeapon("mp_weapon_rspn101", WEAPON_INVENTORY_SLOT_PRIMARY_1, ["bullets_mag_l3","optic_cq_hcog_classic"])
-	player.SetActiveWeaponByName( eActiveInventorySlot.mainHand, "__test" )
+	player.SetActiveWeaponByName( eActiveInventorySlot.mainHand, "mp_weapon_vinson" )
 
 	FixWeapon(primary)
 	FixWeapon(secondary)
