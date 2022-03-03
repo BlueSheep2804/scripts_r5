@@ -317,7 +317,7 @@ void function OnClientConnected( entity player )
 
 void function OnWeaponOwnerChanged_Consumable( entity weapon, WeaponOwnerChangedParams changeParams )
 {
-	printt("OnWeaponOwnerChanged_Consumable")
+	// printt("OnWeaponOwnerChanged_Consumable")
 	#if SERVER
 		if ( !IsValid( changeParams.oldOwner ) )
 		{
@@ -1364,6 +1364,10 @@ void function UltimatePackUse( entity player, ConsumableInfo info )
 		ultimateAbility.SetWeaponPrimaryClipCount( ammo )
 	else
 		ultimateAbility.SetWeaponPrimaryClipCount( maxAmmo )
+	// Gives Wattson full ult on ult accel
+	if( PlayerHasPassive( player, ePassives.PAS_BATTERY_POWERED )) {
+		ultimateAbility.SetWeaponPrimaryClipCount( maxAmmo )
+	}
 }
 
 void function ClientCallback_SetNextHealModType(string nextModName)
